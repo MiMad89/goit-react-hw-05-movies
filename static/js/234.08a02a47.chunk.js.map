@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/234.08a02a47.chunk.js","mappings":"sMAEaA,EAAW,WAIvB,C","sources":["pages/Trending/Trending.jsx"],"sourcesContent":["import React from \"react\";\n\nexport const Trending = () => {\n    <h1>\n        Trending\n    </h1>\n}"],"names":["Trending"],"sourceRoot":""}
