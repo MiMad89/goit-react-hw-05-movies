@@ -1,11 +1,11 @@
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import  SharedLayout  from '../components/SharedLayout/SharedLayout';
-import  {MovieDetails}  from '../pages/MovieDetails/MovieDetails';
+
 
 const Trending = lazy(() => import('../pages/Trending/Trending'));
 const Movies = lazy(() => import('../pages/Movies/Movies'));
-// const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
+const MovieDetails = lazy(() => import('../pages/MovieDetails/MovieDetails'));
 const NotFound = lazy(() => import('../pages/NotFound/NotFound'));
 
 

@@ -3,7 +3,7 @@ import { Link, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieDetails } from 'services';
 import { ImageInfo, Wrapper, Button, List } from './MovieDetails.styled';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState({});
   const { id } = useParams();
   const location = useLocation();
@@ -55,3 +55,5 @@ export const MovieDetails = () => {
     </>
   );
 };
+
+export default MovieDetails;
