@@ -7,12 +7,18 @@ export const TrendingList = ({movies}) => {
         <ul>
             {movies.map(movie => (
                 <li key={movie.id}>
-                    <Link to={`&{movie.id}`} state ={{from: setlocation}}>
+                    <Link
+                        to={{
+                            pathname: `/movies/${movie.id}`,
+                            state: { from: setlocation },
+                        }}
+                    >
                         {movie.title}
                     </Link>
                 </li>
             ))}
         </ul>
+        
     )
 }
 
