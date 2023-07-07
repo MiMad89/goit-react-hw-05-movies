@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Suspense, useEffect, useState } from 'react';
+import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieDetails } from 'services';
 import { ImageInfo, Wrapper, Button, List } from './MovieDetails.styled';
 
@@ -41,7 +41,7 @@ const MovieDetails = () => {
         </ImageInfo>
         <div>
           <h2>{movieDetails.title}</h2>
-          <p>User score: {movieDetails.vote_average * 10}%</p>
+          <p>User score: {(movieDetails.vote_average * 10).toFixed(2)}%</p>
           <h3>Overview</h3>
           <p>{movieDetails.overview}</p>
           <h3>Genres</h3>
@@ -52,6 +52,24 @@ const MovieDetails = () => {
           </ul>
         </div>
       </Wrapper>
+      <hr />
+      <h3>Additional information</h3>
+      <ul>
+        <li>
+        <Link to="cast" state={{ from: location.state?.from ?? '/'}}>
+            Cast
+          </Link>
+        </li>
+        <li>
+          <Link to="reviews" state={{ from: location.state?.from ?? '/'}}>
+            Reviews
+          </Link>
+        </li>
+      </ul>
+      <hr />
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Outlet />
+      </Suspense>
     </>
   );
 };
