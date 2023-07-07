@@ -10,13 +10,12 @@ const Cast = () => {
     const getMovieCast = async () => {
       try {
         setCast(await fetchMovieCast(id));
-        } catch (error) {
+      } catch (error) {
         console.log(error);
-        }
+      }
     };
     getMovieCast();
-    }, [id]);
-    
+  }, [id]);
 
   return (
     <>

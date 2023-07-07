@@ -1,5 +1,5 @@
-import React from "react";
-import { Form, Button, Input } from "./SearchBox.styled";
+import React from 'react';
+import { Form, Button, Input } from './SearchBox.styled';
 
 export const SearchBox = ({ onSubmit }) => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { fetchMovies } from 'services';
 import { useEffect, useState } from 'react';
-import  TrendingList  from 'components/TrendingList/TrendingList';
+import TrendingList from 'components/TrendingList/TrendingList';
 
 const Trending = () => {
   const [trending, setTrending] = useState([]);

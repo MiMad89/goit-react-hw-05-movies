@@ -15,16 +15,13 @@ export const fetchMovies = async () => {
 };
 
 export const fetchMovieDetails = async id => {
-  const response = await axios.get(
-    `https://api.themoviedb.org/3/movie/${id}`,
-    {
-      params: {
-        api_key: API_KEY,
-      },
-    }
-  );
+  const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}`, {
+    params: {
+      api_key: API_KEY,
+    },
+  });
   return response.data;
-}
+};
 
 export const fetchSearchMovies = async query => {
   const response = await axios.get(
@@ -37,7 +34,7 @@ export const fetchSearchMovies = async query => {
     }
   );
   return response.data.results;
-}
+};
 
 export const fetchMovieCast = async id => {
   const response = await axios.get(
@@ -49,7 +46,7 @@ export const fetchMovieCast = async id => {
     }
   );
   return response.data.cast;
-}
+};
 
 export const fetchMovieReviews = async id => {
   const response = await axios.get(
@@ -61,4 +58,4 @@ export const fetchMovieReviews = async id => {
     }
   );
   return response.data.results;
-}
+};
